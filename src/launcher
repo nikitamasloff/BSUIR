@@ -1,0 +1,69 @@
+# Author : Nikita Maslov
+
+# Passed url of repository
+url=$1
+
+
+# CLONE CLONE CLONE CLONE CLONE CLONE CLONE CLONE
+git clone $url
+
+
+# FIRST FIRST FIRST FIRST FIRST FIRST FIRST FIRST
+
+# Copy first commit
+rm -r laba1/src
+cp -r 1/src laba1/
+
+# Apply first commit
+cd laba1
+git add .
+git commit -m "Change colors"
+
+# Return back to root directory
+cd ..
+
+
+# SECOND SECOND SECOND SECOND SECOND SECOND
+
+# Copy second commit
+rm -r laba1/src
+cp -r 2/src laba1/
+
+# Apply second commit
+cd laba1
+git add .
+git commit -m "Change equation of colors"
+
+# Return back to root directory
+cd ..
+
+
+# THIRD THIRD THIRD THIRD THIRD THIRD THIRD
+
+# Copy third commit
+rm -r laba1/src
+cp -r 3/src laba1/
+
+# Apply third commit
+cd laba1
+git add .
+git commit -m "Add new functions"
+
+# Return back to root directory
+cd ..
+
+
+# FOURTH FOURTH FOURTH FOURTH FOURTH FOURTH
+
+# Copy fourth commit
+rm -r laba1/src
+cp -r 4/src laba1/
+
+# Apply fourth commit
+cd laba1
+git add .
+git commit -m "Add unit tests"
+
+
+# PUSH PUSH PUSH PUSH PUSH PUSH PUSH
+git push origin --all
