@@ -1,4 +1,4 @@
-from com import Com, BAUD_RATES
+from port import Port, BAUD_RATES
 from sys import argv
 import random
 import string
@@ -20,7 +20,7 @@ port_name = argv[1]
 
 # Init port
 
-port = Com()
+port = Port()
 port.open(port_name)
 
 # -------------------------------------------------

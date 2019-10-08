@@ -5,7 +5,7 @@ BAUD_RATES = [50, 75, 110, 134, 150, 200, 300, 600, 1200,1800, 2400, 4800, 9600,
 
 
 # Reference: https://buildmedia.readthedocs.org/media/pdf/pyserial/latest/pyserial.pdf
-class Com:
+class Port:
 
     # Possible values for the parameter timeout which controls the behavior of read():
     #   • timeout = None: wait forever / until requested number of bytes are received
