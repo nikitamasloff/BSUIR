@@ -1,4 +1,4 @@
-from port import Port, BAUD_RATES
+from port import Port
 from sys import argv
 import random
 import string
@@ -46,18 +46,18 @@ keyboard.add_hotkey('shift+3', lambda: on_shift3())
 
 def on_shift1():
     global port
-    port.baud_rate = BAUD_RATES[0]
+    port.baud_rate = Port.BAUD_RATES[0]
     print_baudrate()
 
 def on_shift2():
     global port
-    rand_index = random.randrange(1, len(BAUD_RATES) - 1)
-    port.baud_rate = BAUD_RATES[rand_index]
+    rand_index = random.randrange(1, len(Port.BAUD_RATES) - 1)
+    port.baud_rate = Port.BAUD_RATES[rand_index]
     print_baudrate()
 
 def on_shift3():
     global port
-    port.baud_rate = BAUD_RATES[-1]
+    port.baud_rate = Port.BAUD_RATES[-1]
     print_baudrate()
 
 # -------------------------------------------------
