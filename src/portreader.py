@@ -18,8 +18,7 @@ port_name = argv[1]
 
 # Init port
 
-port = Port()
-port.open(port_name)
+port = Port(port_name)
 
 # -------------------------------------------------
 
@@ -63,6 +62,8 @@ def on_shift3():
 
 # Main
 
+port.open()
 while True:
     data = port.read(size=1).decode()
     print("READ: " + data)
+port.close()

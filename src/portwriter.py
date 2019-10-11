@@ -20,8 +20,7 @@ port_name = argv[1]
 
 # Init port
 
-port = Port()
-port.open(port_name)
+port = Port(port_name)
 
 # -------------------------------------------------
 
@@ -66,8 +65,10 @@ def on_shift3():
 
 # Main
 
+port.open()
 while True:
     data = random_char()
     print("WRITE: " + str(data))
     port.write(data.encode())
     time.sleep(0.2)
+port.close()
