@@ -1,0 +1,16 @@
+OUTPUT:
+BatteryDeviceID = MSI Corp.MS-16P6
+BatteryName = MS-16P6
+PowerSupplyType = AC
+PowerSaveMode = No
+BatteryChargeLevel = 86%
+BatteryChargeStatus = Unknown
+BatteryChemistryType = LithiumIon
+
+
+Preferred project type for this one - 'Windows Forms'
+
+NOTE: In case of need to migrate to another one project type,
+the only one place in code, where specific to 'Windows Forms' code is used
+is in Program.cs::Program::Wait where 'Application.DoEvents()' is called.
+It can be replaced with analogue, that suspends termination of program.
